@@ -9,7 +9,17 @@ server.get('/', function(req, res) {
     console.log(req.headers);
     console.log(req.headers.host);
     console.log(req.headers['accept-encoding']);
-    res.send('Hello World');
+
+    res.send('Hello World!');
+
+    const user = {
+        name: 'Sandeep Kumar',
+        age: 30,
+        college: 'nitkkr'
+    }
+    console.log(user.name);
+    user.age=25;
+    console.log(user['age']);
 });
 
 server.listen(3000, function() {
